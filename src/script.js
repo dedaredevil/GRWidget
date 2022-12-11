@@ -21,28 +21,11 @@ function initMap() {
 
   service.getDetails(request, function (place, status) {
     if (status === google.maps.places.PlacesServiceStatus.OK) {
-      propagateContent(place); // TEMP
       createCard(place, 1);
     } else {
       console.log("PlacesServiceStatusError");
     }
   });
-}
-
-function propagateContent(place) {
-  let reviewAvatarElement1 = document.getElementById("review-profile-photo-1");
-  let reviewNameElement1 = document.getElementById("review-author-name-1");
-  let reviewTextElement1 = document.getElementById("review-text-1");
-  let reviewRelativeTime = document.getElementById("review-relative-time-1");
-
-  reviewAvatarElement1.src = place.reviews[0].profile_photo_url;
-  reviewNameElement1.innerHTML = place.reviews[0].author_name;
-  propogateStars(place.reviews[0].rating);
-  reviewTextElement1.innerHTML = place.reviews[0].text;
-  reviewRelativeTime.innerHTML = place.reviews[0].relative_time_description;
-
-  // TEMP logs
-  console.log(place);
 }
 
 function createCard(place, id) {
@@ -109,18 +92,5 @@ function createCard(place, id) {
 function setAttributes(el, attrs) {
   for (var key in attrs) {
     el.setAttribute(key, attrs[key]);
-  }
-}
-
-function propogateStars(count) {
-  for (let i = 0; i < count; i++) {
-    let starElement = document.createElement("img");
-    setAttributes(starElement, {
-      src: "/images/star.jpg",
-      alt: "Star",
-      height: "15",
-      width: "16",
-    });
-    document.getElementById("stars-container").append(starElement);
   }
 }
