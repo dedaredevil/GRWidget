@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!--Google Maps API Script Starts-->
+    <div id="map" style="display: none"></div>
+    <script src="src/script.js"></script>
+    <script
+      async
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA9AmDNidJQFp4e6wXjng1WtWXsyCDdWFg&callback=initMap&libraries=places&v=weekly"
+    ></script>
+    <!--Google Maps API Script Ends-->
+    <!--Review Cards Starts-->
+    <div id="section" class="section">
+      <div class="card">
+        <div class="media-content">
+          <img
+            class="review-photo"
+            id="review-profile-photo-1"
+            src="data:,"
+            alt="Review Photo"
+            style="width: 100%"
+          />
+          <div class="title is-4" id="review-author-name-1"></div>
+          <div class="content-container" id="stars-container"></div>
+          <div class="review-text" id="review-text-1"></div>
+          <div class="content-container">
+            <img
+              class="places-logo"
+              src="/images/places-logo.jpg"
+              alt="places logo"
+            />
+            <div class="is-grey is-6" id="review-relative-time-1"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Review Cards End-->
+  </body>
+</html>
