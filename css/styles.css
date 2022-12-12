@@ -1,17 +1,45 @@
+.mother {
+  display: flex;
+  justify-content: center;
+}
+
 .section {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-flow: column wrap;
+  /* Your container needs a fixed height, and it 
+   * needs to be taller than your tallest column. */
+  height: 960px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  align-content: center;
+  /* TEMP For testing
+  background-color: rgba(131, 116, 233, 0.2); */
+}
+
+@media only screen and (max-width: 1060px) {
+  .section {
+    height: 1500px;
+  }
+}
+
+@media only screen and (max-width: 730px) {
+  .section {
+    height: 2000px;
+    max-width: 350px;
+    overflow: hidden;
+    align-content: normal;
+  }
 }
 
 .card {
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
   border-radius: 7px;
-  max-width: 300px;
+  width: 300px;
   padding-top: 25px;
   padding-bottom: 25px;
   padding-left: 15px;
   padding-right: 15px;
+  margin: 7px;
 }
 
 .media-content {

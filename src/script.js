@@ -21,7 +21,9 @@ function initMap() {
 
   service.getDetails(request, function (place, status) {
     if (status === google.maps.places.PlacesServiceStatus.OK) {
-      createCard(place, 1);
+      for (let i = 0; i < place.reviews.length; i++) {
+        createCard(place, i);
+      }
     } else {
       console.log("PlacesServiceStatusError");
     }
