@@ -1,9 +1,9 @@
-.mother {
+.section {
   display: flex;
   justify-content: center;
 }
 
-.section {
+.chop-box {
   display: flex;
   flex-flow: column wrap;
   /* Your container needs a fixed height, and it 
@@ -12,18 +12,18 @@
   padding-top: 50px;
   padding-bottom: 50px;
   align-content: center;
-  /* TEMP For testing
-  background-color: rgba(131, 116, 233, 0.2); */
+  /* TEMP For testing */
+  background-color: rgba(131, 116, 233, 0.2);
 }
 
 @media only screen and (max-width: 1060px) {
-  .section {
+  .chop-box {
     height: 1500px;
   }
 }
 
 @media only screen and (max-width: 730px) {
-  .section {
+  .chop-box {
     height: 2000px;
     max-width: 350px;
     overflow: hidden;

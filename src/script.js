@@ -36,7 +36,7 @@ function createCard(place, id) {
   if (place.reviews[id].rating >= lowestReviewScore) {
     const card = document.createElement("div");
     card.classList.add("card");
-    document.getElementById("section").append(card);
+    document.getElementById("chop-box").append(card);
 
     const mediaContent = document.createElement("div");
     mediaContent.classList.add("media-content");
