@@ -8,26 +8,31 @@
   flex-flow: column wrap;
   /* Your container needs a fixed height, and it 
    * needs to be taller than your tallest column. */
-  height: 960px;
+  height: 930px;
   padding-top: 50px;
   padding-bottom: 50px;
   align-content: center;
-  /* TEMP For testing */
-  background-color: rgba(131, 116, 233, 0.2);
+  align-items: center;
+  width: 1035px;
+  overflow: hidden;
+  align-content: normal;
+  /* TEMP For testing 
+  background-color: rgba(131, 116, 233, 0.2); */
 }
 
-@media only screen and (max-width: 1060px) {
+/* Tablet breakpoint two columns */
+@media only screen and (max-width: 1024px) {
   .chop-box {
-    height: 1500px;
+    height: 1380px;
+    width: 690px;
   }
 }
 
-@media only screen and (max-width: 730px) {
+/* Mobile breakpoint one column */
+@media only screen and (max-width: 768px) {
   .chop-box {
-    height: 2000px;
-    max-width: 350px;
-    overflow: hidden;
-    align-content: normal;
+    height: 1840px;
+    max-width: 345px;
   }
 }
 
