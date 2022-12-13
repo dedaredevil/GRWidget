@@ -6,12 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <!--Google Font Script Starts-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
+    <!--Google Font Script End-->
   </head>
   <body>
     <!--Google Maps API Script Starts-->
@@ -22,10 +24,28 @@
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA9AmDNidJQFp4e6wXjng1WtWXsyCDdWFg&callback=initMap&libraries=places&v=weekly"
     ></script>
     <!--Google Maps API Script Ends-->
-    <!--Review Cards Starts-->
+    <!--Google Reviews Widget Starts-->
+    <div class="widget-title">
+      <div class="widget-title__title is-2">Be Another Sucess Story</div>
+      <div class="widget-title__rating-box">
+        <div class="widget-title__shadow-box">
+          <div class="widget-title__place-rating is-4" id="rating"></div>
+          <img class="widget-title__rating-stars" src="/images/star.jpg" />
+          <img class="widget-title__rating-stars" src="/images/star.jpg" />
+          <img class="widget-title__rating-stars" src="/images/star.jpg" />
+          <img class="widget-title__rating-stars" src="/images/star.jpg" />
+          <img class="widget-title__rating-stars" src="/images/star.jpg" />
+        </div>
+        <div
+          class="widget-title__ratings-total is-grey"
+          id="user-ratings-total"
+        ></div>
+      </div>
+    </div>
+
     <div class="section">
       <div id="chop-box" class="chop-box"></div>
     </div>
-    <!--Review Cards End-->
+    <!--Google Reviews Widget Ends-->
   </body>
 </html>

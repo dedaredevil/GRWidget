@@ -1,3 +1,7 @@
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
 .section {
   display: flex;
   justify-content: center;
@@ -21,7 +25,7 @@
 }
 
 /* Tablet breakpoint two columns */
-@media only screen and (max-width: 1024px) {
+@media only screen and (min-width: 769px) and (max-width: 1023px) {
   .chop-box {
     height: 1380px;
     width: 690px;
@@ -49,16 +53,20 @@
 
 .media-content {
   padding: 2px 16px;
-  font-family: "Montserrat", sans-serif;
 }
 
-.title {
+.author {
   margin-top: 15px;
   margin-bottom: 15px;
 }
 
+.is-2 {
+  font-weight: 700;
+  font-size: 32px;
+}
+
 .is-4 {
-  font-weight: 500;
+  font-weight: 600;
   font-size: 18px;
 }
 
@@ -94,4 +102,38 @@
 .review-text {
   margin-top: 30px;
   margin-bottom: 30px;
+}
+
+.widget-title {
+  margin: 50px 20px 0px 20px;
+}
+
+.widget-title__title {
+  margin-bottom: 10px;
+}
+
+.widget-title__shadow-box {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 7px;
+  width: fit-content;
+  padding: 10px;
+}
+
+.widget-title__place-rating {
+  float: left;
+  margin-right: 10px;
+}
+
+.widget-title__rating-stars {
+  margin-top: 3px;
+}
+
+.widget-title__rating-box {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.widget-title__ratings-total {
+  margin-left: 10px;
 }

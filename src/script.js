@@ -15,7 +15,7 @@ function initMap() {
   var request = {
     // Enter unique place id here
     placeId: "ChIJldeDxyahVogRGKNE9zcaFt0",
-    fields: ["name", "reviews"],
+    fields: ["name", "adr_address", "reviews", "rating", "user_ratings_total"],
   };
   var service = new google.maps.places.PlacesService(map);
 
@@ -24,10 +24,18 @@ function initMap() {
       for (let i = 0; i < place.reviews.length; i++) {
         createCard(place, i);
       }
+      createTitle(place);
     } else {
       console.log("PlacesServiceStatusError");
     }
   });
+}
+
+function createTitle(place) {
+  document.getElementById("rating").innerHTML = place.rating;
+  document.getElementById(
+    "user-ratings-total"
+  ).innerHTML = `of ${place.user_ratings_total} reviews`;
 }
 
 function createCard(place, id) {
@@ -52,7 +60,7 @@ function createCard(place, id) {
     mediaContent.append(reviewPhoto);
 
     const reviewName = document.createElement("div");
-    reviewName.classList.add("title", "is-4");
+    reviewName.classList.add("author", "is-4");
     reviewName.innerHTML = place.reviews[id].author_name;
     mediaContent.append(reviewName);
 
