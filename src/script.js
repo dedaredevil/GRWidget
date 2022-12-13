@@ -71,11 +71,10 @@ function createCard(place, id) {
 
     for (let i = 0; i < place.reviews[id].rating; i++) {
       const starElement = document.createElement("img");
+      starElement.classList.add("card__star");
       setAttributes(starElement, {
         src: "/images/star.jpg",
         alt: "Star",
-        height: "15",
-        width: "16",
       });
       starsContainer.append(starElement);
     }

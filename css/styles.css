@@ -92,6 +92,11 @@ body {
   height: 15px;
 }
 
+.card__star {
+  width: 16px;
+  height: 15px;
+}
+
 .card__logo {
   margin-right: 10px;
 }
