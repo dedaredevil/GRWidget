@@ -2,12 +2,12 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
-.section {
+.masonry {
   display: flex;
   justify-content: center;
 }
 
-.chop-box {
+.masonry__chopper {
   display: flex;
   flex-flow: column wrap;
   /* Your container needs a fixed height, and it 
@@ -26,7 +26,7 @@ body {
 
 /* Tablet breakpoint two columns */
 @media only screen and (min-width: 769px) and (max-width: 1023px) {
-  .chop-box {
+  .masonry__chopper {
     height: 1380px;
     width: 690px;
   }
@@ -34,7 +34,7 @@ body {
 
 /* Mobile breakpoint one column */
 @media only screen and (max-width: 768px) {
-  .chop-box {
+  .masonry__chopper {
     height: 1840px;
     max-width: 345px;
   }
@@ -51,13 +51,15 @@ body {
   margin: 7px;
 }
 
-.media-content {
+.card__body {
   padding: 2px 16px;
 }
 
-.author {
+.card__author {
   margin-top: 15px;
   margin-bottom: 15px;
+  font-weight: 600;
+  font-size: 18px;
 }
 
 .is-2 {
@@ -79,7 +81,7 @@ body {
   color: rgb(160, 160, 160);
 }
 
-.content-container {
+.card__flex-container {
   display: flex;
   align-items: center;
 }
@@ -90,50 +92,63 @@ body {
   height: 15px;
 }
 
-.places-logo {
+.card__logo {
   margin-right: 10px;
 }
 
-.review-photo {
+.card__time {
+  color: rgb(160, 160, 160);
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.card__profile-photo {
   max-width: 40px;
   max-height: 40px;
 }
 
-.review-text {
+.card__review {
   margin-top: 30px;
   margin-bottom: 30px;
 }
 
-.widget-title {
+.title {
   margin: 50px 20px 0px 20px;
 }
 
-.widget-title__title {
+.title__copy {
   margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 32px;
 }
 
-.widget-title__shadow-box {
+.title__card {
+  display: flex;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
   border-radius: 7px;
   width: fit-content;
   padding: 10px;
 }
 
-.widget-title__place-rating {
+.title__rating {
   float: left;
   margin-right: 10px;
+  font-weight: 600;
+  font-size: 18px;
+  align-self: center;
 }
 
-.widget-title__rating-stars {
-  margin-top: 3px;
+.title__stars {
+  align-self: center;
 }
 
-.widget-title__rating-box {
+.title__body {
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
 
-.widget-title__ratings-total {
+.title__ratings-total {
   margin-left: 10px;
+  color: rgb(160, 160, 160);
 }

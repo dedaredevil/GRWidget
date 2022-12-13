@@ -25,6 +25,7 @@ function initMap() {
         createCard(place, i);
       }
       createTitle(place);
+      console.log(place);
     } else {
       console.log("PlacesServiceStatusError");
     }
@@ -44,29 +45,29 @@ function createCard(place, id) {
   if (place.reviews[id].rating >= lowestReviewScore) {
     const card = document.createElement("div");
     card.classList.add("card");
-    document.getElementById("chop-box").append(card);
+    document.getElementById("masonry__chopper").append(card);
 
-    const mediaContent = document.createElement("div");
-    mediaContent.classList.add("media-content");
-    card.append(mediaContent);
+    const cardBody = document.createElement("div");
+    cardBody.classList.add("card__body");
+    card.append(cardBody);
 
     const reviewPhoto = document.createElement("img");
-    reviewPhoto.classList.add("review-photo");
+    reviewPhoto.classList.add("card__profile-photo");
     reviewPhoto.src = place.reviews[id].profile_photo_url;
     setAttributes(reviewPhoto, {
       alt: "Review Photo",
       style: "width:100%",
     });
-    mediaContent.append(reviewPhoto);
+    cardBody.append(reviewPhoto);
 
     const reviewName = document.createElement("div");
-    reviewName.classList.add("author", "is-4");
+    reviewName.classList.add("card__author");
     reviewName.innerHTML = place.reviews[id].author_name;
-    mediaContent.append(reviewName);
+    cardBody.append(reviewName);
 
     const starsContainer = document.createElement("div");
-    starsContainer.classList.add("content-container");
-    mediaContent.append(starsContainer);
+    starsContainer.classList.add("card__flex-container");
+    cardBody.append(starsContainer);
 
     for (let i = 0; i < place.reviews[id].rating; i++) {
       const starElement = document.createElement("img");
@@ -80,16 +81,16 @@ function createCard(place, id) {
     }
 
     const reviewText = document.createElement("div");
-    reviewText.classList.add("review-text");
+    reviewText.classList.add("card__review");
     reviewText.innerHTML = place.reviews[id].text;
-    mediaContent.append(reviewText);
+    cardBody.append(reviewText);
 
     const contentContainer = document.createElement("div");
-    contentContainer.classList.add("content-container");
-    mediaContent.append(contentContainer);
+    contentContainer.classList.add("card__flex-container");
+    cardBody.append(contentContainer);
 
     const placesLogo = document.createElement("img");
-    placesLogo.classList.add("places-logo");
+    placesLogo.classList.add("card__logo");
     setAttributes(placesLogo, {
       src: "/images/places-logo.jpg",
       alt: "Review Photo",
@@ -97,7 +98,7 @@ function createCard(place, id) {
     contentContainer.append(placesLogo);
 
     const reviewTime = document.createElement("div");
-    reviewTime.classList.add("is-grey", "is-6");
+    reviewTime.classList.add("card__time");
     reviewTime.innerHTML = place.reviews[id].relative_time_description;
     contentContainer.append(reviewTime);
   }
