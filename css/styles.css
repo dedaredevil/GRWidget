@@ -24,22 +24,6 @@ body {
   background-color: rgba(131, 116, 233, 0.2); */
 }
 
-/* Tablet breakpoint two columns */
-@media only screen and (min-width: 769px) and (max-width: 1023px) {
-  .masonry__chopper {
-    height: 1380px;
-    width: 690px;
-  }
-}
-
-/* Mobile breakpoint one column */
-@media only screen and (max-width: 768px) {
-  .masonry__chopper {
-    height: 1840px;
-    max-width: 345px;
-  }
-}
-
 .card {
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
   border-radius: 7px;
@@ -158,4 +142,34 @@ body {
 .title__ratings-total {
   margin-left: 10px;
   color: rgb(160, 160, 160);
+}
+
+/* 4K breakpoint three columns */
+@media only screen and (min-width: 1800px) {
+  .title {
+    margin-left: 20%;
+  }
+}
+
+/* FullHD breakpoint three columns */
+@media only screen and (min-width: 1408px) and (max-width: 1799px) {
+  .title {
+    margin-left: 10%;
+  }
+}
+
+/* Tablet breakpoint two columns */
+@media only screen and (min-width: 769px) and (max-width: 1023px) {
+  .masonry__chopper {
+    height: 1380px;
+    width: 690px;
+  }
+}
+
+/* Mobile breakpoint one column */
+@media only screen and (max-width: 768px) {
+  .masonry__chopper {
+    height: 1840px;
+    max-width: 345px;
+  }
 }
