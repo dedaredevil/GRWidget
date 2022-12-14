@@ -49,6 +49,8 @@ body {
   padding-left: 15px;
   padding-right: 15px;
   margin: 7px;
+  text-decoration: none;
+  color: inherit;
 }
 
 .card__body {

@@ -25,7 +25,6 @@ function initMap() {
         createCard(place, i);
       }
       createTitle(place);
-      console.log(place); //TEMP log
     } else {
       console.log("PlacesServiceStatusError");
     }
@@ -76,8 +75,9 @@ function createCard(place, id) {
   const lowestReviewScore = 3;
 
   if (place.reviews[id].rating >= lowestReviewScore) {
-    const card = document.createElement("div");
+    const card = document.createElement("a");
     card.classList.add("card");
+    card.setAttribute("href", place.reviews[id].author_url);
     document.getElementById("masonry__chopper").append(card);
 
     const cardBody = document.createElement("div");
