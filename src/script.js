@@ -25,7 +25,7 @@ function initMap() {
         createCard(place, i);
       }
       createTitle(place);
-      console.log(place);
+      console.log(place); //TEMP log
     } else {
       console.log("PlacesServiceStatusError");
     }
@@ -37,6 +37,39 @@ function createTitle(place) {
   document.getElementById(
     "user-ratings-total"
   ).innerHTML = `of ${place.user_ratings_total} reviews`;
+
+  const rating = place.rating;
+
+  switch (true) {
+    case rating >= 4.5:
+      createStars(5);
+      break;
+    case rating >= 3.5:
+      createStars(4);
+      break;
+    case rating >= 2.5:
+      createStars(3);
+      break;
+    case rating >= 1.5:
+      createStars(2);
+      break;
+    case rating >= 0.5:
+      createStars(1);
+      break;
+    default:
+  }
+}
+
+function createStars(count) {
+  for (let i = 0; i < count; i++) {
+    const starElement = document.createElement("img");
+    starElement.classList.add("title__stars");
+    setAttributes(starElement, {
+      src: "/images/star.jpg",
+      alt: "Star",
+    });
+    document.getElementById("title__card").append(starElement);
+  }
 }
 
 function createCard(place, id) {
