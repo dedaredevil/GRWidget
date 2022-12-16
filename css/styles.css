@@ -5,6 +5,7 @@ body {
 .masonry {
   display: flex;
   justify-content: center;
+  background-color: rgba(131, 116, 233, 0.2); /* TEMP */
 }
 
 .masonry__chopper {
@@ -105,6 +106,7 @@ body {
 
 .title {
   margin: 50px 20px 0px 20px;
+  background-color: rgba(131, 116, 233, 0.2); /* TEMP */
 }
 
 .title__copy {

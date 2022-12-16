@@ -1,0 +1,26 @@
+{
+  "name": "google-review-carousel",
+  "version": "1.0.0",
+  "description": "��#\u0000 \u0000g\u0000o\u0000o\u0000g\u0000l\u0000e\u0000-\u0000r\u0000e\u0000v\u0000i\u0000e\u0000w\u0000-\u0000c\u0000a\u0000r\u0000o\u0000u\u0000s\u0000e\u0000l\u0000\r\u0000 \u0000",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel index.jsx -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dedaredevil/google-review-carousel.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dedaredevil/google-review-carousel/issues"
+  },
+  "homepage": "https://github.com/dedaredevil/google-review-carousel#readme",
+  "dependencies": {
+    "@babel/cli": "^7.19.3",
+    "@babel/core": "^7.20.5",
+    "@babel/plugin-transform-react-jsx": "^7.19.0"
+  }
+}
