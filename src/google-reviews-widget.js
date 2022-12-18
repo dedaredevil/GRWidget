@@ -42,7 +42,7 @@ function renderDOM(place) {
   // <div class="title__copy">
   const TITLE_COPY = document.createElement("div");
   TITLE_COPY.classList.add("title__copy");
-  TITLE_COPY.innerHTML = "Be Another Sucess Story";
+  TITLE_COPY.innerHTML = "Be Another Success Story";
   TITLE.append(TITLE_COPY);
 
   // <div class="title__body">
