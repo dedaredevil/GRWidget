@@ -2,6 +2,9 @@ var map;
 var service;
 var infowindow;
 
+window.addEventListener("resize", resizeFlexbox);
+renderMAP();
+
 function initMap() {
   var sydney = new google.maps.LatLng(35.23028688153356, -80.83964581780258);
 
@@ -215,4 +218,10 @@ function resizeFlexbox() {
   }
 }
 
-window.addEventListener("resize", resizeFlexbox);
+function renderMAP() {
+  const MAP = document.createElement("div");
+  MAP.setAttribute("id", "map");
+  MAP.style.display = "none";
+  document.body.appendChild(MAP);
+  // <div id="map" style="display: none"></div>
+}
