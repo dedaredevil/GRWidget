@@ -21,10 +21,8 @@ function initMap() {
 
   service.getDetails(request, function (place, status) {
     if (status === google.maps.places.PlacesServiceStatus.OK) {
-      for (let i = 0; i < place.reviews.length; i++) {
-        createCard(place, i);
-      }
-      createTitle(place);
+      renderDOM(place);
+      // Initial checck on media query
       resizeFlexbox();
     } else {
       console.log("PlacesServiceStatusError");
@@ -32,31 +30,88 @@ function initMap() {
   });
 }
 
-function createTitle(place) {
-  document.getElementById("rating").innerHTML = place.rating;
-  document.getElementById(
-    "user-ratings-total"
-  ).innerHTML = `of ${place.user_ratings_total} reviews`;
+function renderDOM(place) {
+  // <div class="title">
+  const TITLE = document.createElement("div");
+  TITLE.classList.add("title");
+  document.getElementById("widget").append(TITLE);
+
+  // <div class="title__copy">
+  const TITLE_COPY = document.createElement("div");
+  TITLE_COPY.classList.add("title__copy");
+  TITLE_COPY.innerHTML = "Be Another Sucess Story";
+  TITLE.append(TITLE_COPY);
+
+  // <div class="title__body">
+  const TITLE_BODY = document.createElement("div");
+  TITLE_BODY.classList.add("title__body");
+  TITLE.append(TITLE_BODY);
+
+  // <div class="title__card">
+  const TITLE_CARD = document.createElement("div");
+  TITLE_CARD.classList.add("title__card");
+  TITLE_CARD.setAttribute("id", "title_card");
+  TITLE_BODY.append(TITLE_CARD);
+
+  // <div class="title__rating">
+  const TITLE_RATING = document.createElement("div");
+  TITLE_RATING.classList.add("title__rating");
+  TITLE_RATING.innerHTML = place.rating;
+  TITLE_CARD.append(TITLE_RATING);
 
   const RATING = place.rating;
 
   switch (true) {
     case RATING >= 4.5:
-      createStars(5);
+      renderStars(5);
       break;
     case RATING >= 3.5:
-      createStars(4);
+      renderStars(4);
       break;
     case RATING >= 2.5:
-      createStars(3);
+      renderStars(3);
       break;
     case RATING >= 1.5:
-      createStars(2);
+      renderStars(2);
       break;
     case RATING >= 0.5:
-      createStars(1);
+      renderStars(1);
       break;
     default:
+  }
+
+  // <div class="title__rating-total">
+  const TITLE_RATINGS = document.createElement("div");
+  TITLE_RATINGS.classList.add("title__ratings-total");
+  TITLE_RATINGS.innerHTML = `of ${place.user_ratings_total} reviews`;
+  TITLE_BODY.append(TITLE_RATINGS);
+
+  // <div class="masonry">
+  const MASONRY = document.createElement("div");
+  MASONRY.classList.add("masonry");
+  document.getElementById("widget").append(MASONRY);
+
+  // <div class="masonry__chopper">
+  const MASONRY_CHOPPER = document.createElement("div");
+  MASONRY_CHOPPER.classList.add("masonry__chopper");
+  MASONRY_CHOPPER.setAttribute("id", "masonry__chopper");
+  MASONRY.append(MASONRY_CHOPPER);
+
+  // Render cards
+  for (let i = 0; i < place.reviews.length; i++) {
+    createCard(place, i);
+  }
+}
+
+function renderStars(count) {
+  for (let i = 0; i < count; i++) {
+    const STAR_ELEMENT = document.createElement("img");
+    STAR_ELEMENT.classList.add("title__stars");
+    setAttributes(STAR_ELEMENT, {
+      src: "/images/star.jpg",
+      alt: "Star",
+    });
+    document.getElementById("title_card").append(STAR_ELEMENT);
   }
 }
 
