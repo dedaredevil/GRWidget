@@ -2,6 +2,7 @@
 
 #widget {
   font-family: "Montserrat", sans-serif;
+  background-color: #212023;
 }
 
 .masonry {
@@ -37,10 +38,12 @@
   margin: 7px;
   text-decoration: none;
   color: inherit;
+  background-color: #29282b;
 }
 
 .card__body {
   padding: 2px 16px;
+  color: white;
 }
 
 .card__author {
@@ -48,6 +51,7 @@
   margin-bottom: 15px;
   font-weight: 600;
   font-size: 18px;
+  color: white;
 }
 
 .is-2 {
@@ -75,7 +79,6 @@
 }
 
 .star {
-  background-image: url(/images/star.jpg);
   width: 16px;
   height: 15px;
 }
@@ -87,6 +90,8 @@
 
 .card__logo {
   margin-right: 10px;
+  width: 17px;
+  height: 26px;
 }
 
 .card__time {
@@ -107,12 +112,14 @@
 
 .title {
   margin: 50px 20px 0px 20px;
+  padding-top: 70px;
 }
 
 .title__copy {
   margin-bottom: 10px;
   font-weight: 700;
   font-size: 32px;
+  color: white;
 }
 
 .title__card {
@@ -121,6 +128,7 @@
   border-radius: 7px;
   width: fit-content;
   padding: 10px;
+  background-color: #29282b;
 }
 
 .title__rating {
@@ -128,11 +136,14 @@
   margin-right: 10px;
   font-weight: 600;
   font-size: 18px;
+  color: white;
   align-self: center;
 }
 
 .title__stars {
   align-self: center;
+  width: 16px;
+  height: 15px;
 }
 
 .title__body {

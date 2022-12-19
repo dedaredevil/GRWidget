@@ -111,7 +111,7 @@ function renderStars(count) {
     const STAR_ELEMENT = document.createElement("img");
     STAR_ELEMENT.classList.add("title__stars");
     setAttributes(STAR_ELEMENT, {
-      src: "/images/star.jpg",
+      src: "/images/star.png",
       alt: "Star",
     });
     document.getElementById("title_card").append(STAR_ELEMENT);
@@ -123,7 +123,7 @@ function createStars(count) {
     const STAR_ELEMENT = document.createElement("img");
     STAR_ELEMENT.classList.add("title__stars");
     setAttributes(STAR_ELEMENT, {
-      src: "/images/star.jpg",
+      src: "/images/star.png",
       alt: "Star",
     });
     document.getElementById("title__card").append(STAR_ELEMENT);
@@ -165,7 +165,7 @@ function createCard(place, id) {
       const STAR_ELEMENT = document.createElement("img");
       STAR_ELEMENT.classList.add("card__star");
       setAttributes(STAR_ELEMENT, {
-        src: "/images/star.jpg",
+        src: "/images/star.png",
         alt: "Star",
       });
       STARS_CONTAINER.append(STAR_ELEMENT);
@@ -183,7 +183,7 @@ function createCard(place, id) {
     const placesLogo = document.createElement("img");
     placesLogo.classList.add("card__logo");
     setAttributes(placesLogo, {
-      src: "/images/places-logo.jpg",
+      src: "/images/places-logo.png",
       alt: "Review Photo",
     });
     CONTENT_CONTAINER.append(placesLogo);
