@@ -25,12 +25,19 @@ function initMap() {
   service.getDetails(request, function (place, status) {
     if (status === google.maps.places.PlacesServiceStatus.OK) {
       renderDOM(place);
-      // Initial checck on media query
       resizeFlexbox();
+      renderLogo();
     } else {
       console.log("PlacesServiceStatusError");
     }
   });
+}
+
+function renderLogo() {
+  // TEMP
+  const LOGO = document.createElement("img");
+  LOGO.classList.add("logo");
+  document.getElementById("widget").append(LOGO);
 }
 
 function renderDOM(place) {
@@ -102,7 +109,7 @@ function renderDOM(place) {
 
   // Render cards
   for (let i = 0; i < place.reviews.length; i++) {
-    createCard(place, i);
+    renderCards(place, i);
   }
 }
 
@@ -118,19 +125,7 @@ function renderStars(count) {
   }
 }
 
-function createStars(count) {
-  for (let i = 0; i < count; i++) {
-    const STAR_ELEMENT = document.createElement("img");
-    STAR_ELEMENT.classList.add("title__stars");
-    setAttributes(STAR_ELEMENT, {
-      src: "/images/star.png",
-      alt: "Star",
-    });
-    document.getElementById("title__card").append(STAR_ELEMENT);
-  }
-}
-
-function createCard(place, id) {
+function renderCards(place, id) {
   const LOWEST_REVIEW_SCORE = 3;
 
   if (place.reviews[id].rating >= LOWEST_REVIEW_SCORE) {
@@ -223,5 +218,4 @@ function renderMAP() {
   MAP.setAttribute("id", "map");
   MAP.style.display = "none";
   document.body.appendChild(MAP);
-  // <div id="map" style="display: none"></div>
 }

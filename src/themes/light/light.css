@@ -151,9 +151,20 @@
   color: rgb(160, 160, 160);
 }
 
+.logo {
+  content: url(/images/google_on_white.png);
+  margin-left: 10px;
+  width: 58px;
+  height: 17px;
+  margin-bottom: 20px;
+}
+
 /* 4K breakpoint three columns */
 @media only screen and (min-width: 1800px) {
   .title {
+    margin-left: 20%;
+  }
+  .logo {
     margin-left: 20%;
   }
 }
@@ -161,6 +172,9 @@
 /* FullHD breakpoint three columns */
 @media only screen and (min-width: 1408px) and (max-width: 1799px) {
   .title {
+    margin-left: 10%;
+  }
+  .logo {
     margin-left: 10%;
   }
 }
