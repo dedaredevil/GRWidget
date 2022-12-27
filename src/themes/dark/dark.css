@@ -1,8 +1,28 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap");
 
+*,
+*::before,
+*::after {
+  box-sizing: content-box;
+}
+
+body #widget {
+  line-height: normal;
+}
+
 #widget {
   font-family: "Montserrat", sans-serif;
   background-color: #212023;
+  margin: 0;
+  margin-top: 0px;
+  margin-right: -5px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  padding: 0;
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
 }
 
 .masonry {
@@ -54,25 +74,6 @@
   color: white;
 }
 
-.is-2 {
-  font-weight: 700;
-  font-size: 32px;
-}
-
-.is-4 {
-  font-weight: 600;
-  font-size: 18px;
-}
-
-.is-6 {
-  font-weight: 400;
-  font-size: 14px;
-}
-
-.is-grey {
-  color: rgb(160, 160, 160);
-}
-
 .card__flex-container {
   display: flex;
   align-items: center;
@@ -110,7 +111,7 @@
   margin-bottom: 30px;
 }
 
-.title {
+.header {
   margin: 50px 20px 0px 20px;
   padding-top: 70px;
 }
@@ -167,7 +168,7 @@
 
 /* 4K breakpoint three columns */
 @media only screen and (min-width: 1800px) {
-  .title {
+  .header {
     margin-left: 20%;
   }
   .logo {
@@ -177,7 +178,7 @@
 
 /* FullHD breakpoint three columns */
 @media only screen and (min-width: 1408px) and (max-width: 1799px) {
-  .title {
+  .header {
     margin-left: 10%;
   }
   .logo {

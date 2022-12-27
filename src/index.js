@@ -43,7 +43,7 @@ function renderLogo() {
 function renderDOM(place) {
   // <div class="title">
   const TITLE = document.createElement("div");
-  TITLE.classList.add("title");
+  TITLE.classList.add("header");
   document.getElementById("widget").append(TITLE);
 
   // <div class="title__copy">
