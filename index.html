@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="css/mystyles.css" />
-    <link rel="stylesheet" type="text/css" href="src/themes/dark/dark.css" />
+    <link rel="stylesheet" type="text/css" href="src/themes/light/light.css" />
   </head>
   <body>
     <section class="hero is-medium is-primary">
@@ -22,11 +22,24 @@
                   <br>
                   using <strong>Google Maps</strong> and <strong>Places API</strong>. 
               </h2>
+              <p class="control">
+                <a class="button is-medium is-link" href="http://bulma.io/documentation/overview/start/">
+                  <strong class="has-text-weight-semibold">Documentation</strong>
+                </a>
+              </p>
             </div>
           </div>
         </div>
       </div>
     </section>
+    <!--Google Widget Script Starts-->
+    <script src="src/index.js"></script>
+    <script
+      async
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA9AmDNidJQFp4e6wXjng1WtWXsyCDdWFg&callback=initMap&libraries=places&v=weekly"
+    ></script>
+    <div id="widget"></div>
+    <!--Google Widget Script Ends-->
     <section class="section">
       <div class="container">
         <div class="columns">
@@ -212,13 +225,5 @@
         </div>
       </div>
     </footer>
-    <!--Google Widget Script Starts-->
-    <script src="src/index.js"></script>
-    <script
-      async
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA9AmDNidJQFp4e6wXjng1WtWXsyCDdWFg&callback=initMap&libraries=places&v=weekly"
-    ></script>
-    <div id="widget"></div>
-    <!--Google Widget Script Ends-->
   </body>
 </html>
