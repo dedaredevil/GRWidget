@@ -14,7 +14,7 @@
   flex-flow: column wrap;
   /* Your container needs a fixed height, and it 
    * needs to be taller than your tallest column. */
-  height: 930px;
+  height: 830px;
   padding-top: 50px;
   padding-bottom: 50px;
   align-content: center;
