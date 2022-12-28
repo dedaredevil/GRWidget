@@ -10,7 +10,7 @@ GRWidget is an always up-to-date Google review widget for your website using [Go
 * **Zero Dependencies** - Only CSS and JS
 * **Customization** - Control which reviews show
 
-[See a demo](https://www.google.com/)
+[See a demo](https://gr-widget.vercel.app/)
 
 ## Setup Instructions
 
