@@ -18,7 +18,7 @@
                 GRWidget
               </h1>
               <h2 class="subtitle is-4">
-                  An always up to date Google review widget for your website using <strong>Google Maps</strong> and <strong>Places API</strong>. 
+                  An always up-to-date Google review widget for your website and non-search area business using <strong>Google Maps</strong> and <strong>Places API</strong>. 
               </h2>
               <p class="control">
                 <a class="button is-medium is-warning" href="https://github.com/dedaredevil/GRWidget">
@@ -54,7 +54,7 @@
                   Lightweight - Only one JS file under 9KB
                 </li>
                 <li>
-                  Responsive - Shows 3 different columns layouts at different breakpoints
+                  Responsive - Shows three different columns layouts at different breakpoints
                 </li>
                 <li>
                   Themes - Choose from a light or dark theme
@@ -74,13 +74,13 @@
                 <li>
                   <p>
                     <strong>Configure</strong> your 
-                    <code><a href="https://developers.google.com/maps/documentation/places/web-service/cloud-setup">Google Cloud project</a></code>
+                    <a href="https://developers.google.com/maps/documentation/places/web-service/cloud-setup">Google Cloud project</a>
                   </p>
                 </li>
                 <li>
                   <p>
                     <strong>Create</strong> your  
-                    <code><a href="https://developers.google.com/maps/documentation/places/web-service/get-api-key">API key</a></code>
+                    <a href="https://developers.google.com/maps/documentation/places/web-service/get-api-key">API key</a>
                   </p>
                 </li>
                 <li>
@@ -108,14 +108,14 @@
                 </li>
                 <li>
                   <p>
-                    <strong>Replace</strong> <code>YOUR_API_KEY</code> with your <code><a href="https://developers.google.com/maps/documentation/places/web-service/get-api-key">API key</a></code> from the script above:
+                    <strong>Replace</strong> <code>YOUR_API_KEY</code> with your <a href="https://developers.google.com/maps/documentation/places/web-service/get-api-key">API key</a> from the script above:
                     <br>
                     <pre><code><xmp><script async src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap&libraries=places&v=weekly"></script></xmp></code></pre>
                   </p>
                 </li>
                 <li>
                   <p>
-                    <strong>Move</strong> everything from the GRWidget's <strong>src/</strong> directory into your own project's <strong>src/</strong> directory:
+                    <strong>Move</strong> everything from the GRWidget's <code>src/</code> directory into your own project's <code>src/</code> directory:
                     <br>
                     <pre><code>
                       src <span style="color: #8338EC;">
@@ -129,22 +129,22 @@
                 </li>
                 <li>
                   <p>
-                    <strong>Choose</strong> <code>light.css</code> or <code>dark.css</code> by adding the appropriate themed stylesheet to the <strong>head</strong>:
+                    <strong>Choose</strong> either the <code>light.css</code> or <code>dark.css</code> by adding the appropriate themed stylesheet to the <code>head</code> tag:
                     <br>
                     <pre><code><xmp><link rel="stylesheet" type="text/css" href="src/themes/light/light.css" /></xmp></code></pre>
                   </p>
                 </li>
                 <li>
                   <p>
-                    <strong>Find</strong> your <code><a href="https://developers.google.com/maps/documentation/places/web-service/place-id">Place ID</a></code> and save it to your clipboard
+                    <strong>Find</strong> your <a href="https://developers.google.com/maps/documentation/places/web-service/place-id">Place ID</a> and save it to your clipboard
                   </p>
                 </li>
                 <li>
                   <p>
-                    <strong>Replace</strong> the demo <code><a href="https://developers.google.com/maps/documentation/places/web-service/place-id">Place ID</a></code> in the <code>index.js</code> file with you just saved: 
+                    <strong>Replace</strong> the demo <a href="https://developers.google.com/maps/documentation/places/web-service/place-id">Place ID</a> in the <code>index.js</code> file that you placed in your <code>src/</code> directory: 
                     <br>
                     <pre><code>var request = {
-  placeId: <span style="color: #22863a;">"ChIJldeDxyahVogRGKNE9zcaFt0"</span>,
+  placeId: <span style="color: #8338EC;">"ChIJldeDxyahVogRGKNE9zcaFt0"</span>,
   fields: ["name", "adr_address", "reviews", "rating", "user_ratings_total"],
   };</code></pre>
                   </p>
@@ -154,7 +154,7 @@
               <p>
                 <strong>Replace</strong> the number in <code>index.js</code> to show reviews only over that amount:
                 <br>
-                <pre><code>const LOWEST_REVIEW_SCORE = <span style="color: #22863a;">3</span>;</code></pre>
+                <pre><code>const LOWEST_REVIEW_SCORE = <span style="color: #8338EC;">3</span>;</code></pre>
               </p>
             </div>
             <div class="field">

@@ -7,10 +7,11 @@ $yellow: #FFBE0B;
 
 // Update Bulma's global variables
 $primary: $purple;
-
-// Update some of Bulma's component variables
 $link: $purple;
 $success: $purple;
+$red: $yellow;
+
+// Update some of Bulma's component variables
 
 // Import Bulma
 @import "../node_modules/bulma/bulma.sass";
