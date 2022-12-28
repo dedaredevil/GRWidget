@@ -18,9 +18,7 @@
                 GRWidget
               </h1>
               <h2 class="subtitle is-4">
-                  An always up to date Google review widget for your website 
-                  <br>
-                  using <strong>Google Maps</strong> and <strong>Places API</strong>. 
+                  An always up to date Google review widget for your website using <strong>Google Maps</strong> and <strong>Places API</strong>. 
               </h2>
               <p class="control">
                 <a class="button is-medium is-link" href="http://bulma.io/documentation/overview/start/">
@@ -45,146 +43,113 @@
         <div class="columns">
           <div class="column is-8-desktop is-offset-2-desktop">
             <div class="content">
-              <h3>What's included</h3>
+              <h3>Why GRWidget?</h3>
               <p>
-                The <code>npm</code> dependencies included in <code>package.json</code> are:
+                Two <code>scripts</code>, one <code>div</code>,  and one <code>stylesheet</code> to run.
               </p>
               <ul>
                 <li>
-                  <code><a href="https://github.com/jgthms/bulma">bulma</a></code>
+                  Lightweight
                 </li>
                 <li>
-                  <code><a href="https://github.com/sass/sass">sass</a></code> to compile your own Sass file
+                  Fast
                 </li>
                 <li>
-                  <code><a href="https://github.com/postcss/postcss-cli">postcss-cli</a></code> and <code><a href="https://github.com/postcss/autoprefixer">autoprefixer</a></code> to add support for older browsers
+                  Responsive
                 </li>
                 <li>
-                  <code><a href="https://babeljs.io/docs/usage/cli/">babel-cli</a></code>,
-                  <code><a href="https://github.com/babel/babel-preset-env">babel-preset-env</a></code>
-                  and
-                  <code><a href="https://github.com/jmcriffey/babel-preset-es2015-ie">babel-preset-es2015-ie</a></code>
-                  for compiling ES6 JavaScript files
+                  Customizable
                 </li>
               </ul>
+              <h3>Setup Instructions</h3>
               <p>
-                Apart from <code>package.json</code>, the following files are included:
-              </p>
-              <ul>
-                <li>
-                  <code>.babelrc</code> configuration file for <a href="https://babeljs.io/">Babel</a>
-                </li>
-                <li>
-                  <code>.gitignore</code> common <a href="https://git-scm.com/">Git</a> ignored files
-                </li>
-                <li>
-                  <code>index.html</code> this HTML5 file
-                </li>
-                <li>
-                  <code>_sass/main.scss</code> a basic SCSS file that <strong>imports Bulma</strong> and explains how to <strong>customize</strong> your styles, and compiles to <code>css/main.css</code>
-                </li>
-                <li>
-                  <code>_javascript/main.js</code> an ES6 JavaScript that compiles to <code>lib/main.js</code>
-                </li>
-              </ul>
-              <h3>Try it out!</h3>
-              <p>
-                To see if your setup works, follow these steps:
+                Follow these steps to get your own widget running on your site:
               </p>
               <ol>
                 <li>
                   <p>
-                    <strong>Move</strong> to this directory:
-                    <br>
-                    <pre><code>cd bulma-start</code></pre>
+                    <strong>Configure</strong> your 
+                    <code><a href="https://developers.google.com/maps/documentation/places/web-service/cloud-setup">Google Cloud project</a></code>
                   </p>
                 </li>
                 <li>
                   <p>
-                    <strong>Install</strong> all dependencies:
-                    <br>
-                    <pre><code>npm install</code></pre>
+                    <strong>Create</strong> your  
+                    <code><a href="https://developers.google.com/maps/documentation/places/web-service/get-api-key">API key</a></code>
                   </p>
                 </li>
                 <li>
                   <p>
-                    <strong>Start</strong> the CSS and JS watchers:
+                    <strong>Restrict</strong> your key</a></code> to:
                     <br>
-                    <pre><code>npm start</code></pre>
+                    <pre><code>Maps JavaScript API<br>Places API</code></pre>
                   </p>
                 </li>
                 <li>
                   <p>
-                    <strong>Edit</strong> <code>_sass/main.scss</code> by adding the following rule at the <strong>end</strong> of the file:
+                    <strong>Install</strong> GRWidget:
                     <br>
-                    <pre><span style="color: #22863a;">html</span> {
-  <span style="color: #005cc5;"><span style="color: #005cc5;">background-color</span></span>: <span style="color: #24292e">$green</span>;
-}</pre>
+                    <pre><code>npm install GRWidget</code></pre>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <strong>Insert</strong> in your project's <code>body</code>:
+                    <br>
+                    <pre><code><xmp><script src="src/index.js"></script>
+<script async src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap&libraries=places&v=weekly"></script>
+<div id="widget"></div></xmp></code></pre>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <strong>Replace</strong> <code>YOUR_API_KEY</code> with your <code><a href="https://developers.google.com/maps/documentation/places/web-service/get-api-key">API key</a></code> from the script above:
+                    <br>
+                    <pre><code><xmp><script async src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap&libraries=places&v=weekly"></script></xmp></code></pre>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <strong>Move</strong> everything from GRWidget's <strong>src/</strong> directory into your own project's <strong>src/</strong> directory:
+                    <br>
+                    <pre><code>
+                      src <span style="color: #22863a;">
+                      ├── index.js
+                      └── themes
+                          ├── dark
+                          │   ├── dark.css
+                          └── light
+                              └── light.css</span></code></pre>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <strong>Choose</strong> <code>light.css</code> or <code>dark.css</code> by adding the appropriate themed stylesheet to the <strong>head</strong>:
+                    <br>
+                    <pre><code><xmp><link rel="stylesheet" type="text/css" href="src/themes/light/light.css" /></xmp></code></pre>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <strong>Find</strong> your <code><a href="https://developers.google.com/maps/documentation/places/web-service/place-id">Place ID</a></code> and save it to your clipboard
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <strong>Replace</strong> the demo <code><a href="https://developers.google.com/maps/documentation/places/web-service/place-id">Place ID</a></code> in the <code>index.js</code> file with you just saved: 
+                    <br>
+                    <pre><code>var request = {
+  placeId: <span style="color: #22863a;">"ChIJldeDxyahVogRGKNE9zcaFt0"</span>,
+  fields: ["name", "adr_address", "reviews", "rating", "user_ratings_total"],
+  };</code></pre>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <strong>Enjoy</strong> using the <strong class="has-text-success">GRWidget</strong>!
                   </p>
                 </li>
               </ol>
-              <p>
-                The page background should turn <strong class="has-text-success">green</strong>!
-              </p>
-              <h3>Get started</h3>
-              <p>
-                You're <strong>ready</strong> to create your own designs with Bulma. Just edit or duplicate this page, or simply create a new one!
-                <br>
-                For example, this page is <strong>only</strong> built with the following <strong>Bulma elements</strong>:
-              </p>
-            </div>
-            <table class="table is-bordered is-fullwidth">
-              <thead>
-                <tr>
-                  <th>Type</th>
-                  <th>CSS class</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th>Columns</th>
-                  <td>
-                    <code><a href="http://bulma.io/documentation/columns/basics">columns</a></code>
-                    <code><a href="http://bulma.io/documentation/columns/basics">column</a></code>
-                  </td>
-                </tr>
-                <tr>
-                  <th>Layout</th>
-                  <td>
-                    <code><a href="http://bulma.io/documentation/layout/section">section</a></code>
-                    <code><a href="http://bulma.io/documentation/layout/container">container</a></code>
-                    <code><a href="http://bulma.io/documentation/layout/footer">footer</a></code>
-                  </td>
-                </tr>
-                <tr>
-                  <th>Elements</th>
-                  <td>
-                    <code><a href="http://bulma.io/documentation/elements/button">button</a></code>
-                    <code><a href="http://bulma.io/documentation/elements/content">content</a></code>
-                    <code><a href="http://bulma.io/documentation/elements/title">title</a></code>
-                    <code><a href="http://bulma.io/documentation/elements/title">subtitle</a></code>
-                  </td>
-                </tr>
-                <tr>
-                  <th>Form</th>
-                  <td>
-                    <code><a href="http://bulma.io/documentation/form/general">field</a></code>
-                    <code><a href="http://bulma.io/documentation/form/general">control</a></code>
-                  </td>
-                </tr>
-                <tr>
-                  <th>Helpers</th>
-                  <td>
-                    <code><a href="http://bulma.io/documentation/modifiers/typography-helpers/">has-text-centered</a></code>
-                    <code><a href="http://bulma.io/documentation/modifiers/typography-helpers/">has-text-weight-semibold</a></code>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-            <div class="content">
-              <p>
-                If you want to <strong>learn more</strong>, follow these links:
-              </p>
             </div>
             <div class="field is-grouped">
               <p class="control">
@@ -208,7 +173,7 @@
           <div class="column is-8-desktop is-offset-2-desktop">
             <p>
               <strong class="has-text-weight-semibold">
-                <a href="https://www.npmjs.com/package/bulma-start">bulma-start@0.0.5</a>
+                <a href="https://www.npmjs.com/package/bulma-start">GRWidget@0.0.5</a>
               </strong>
             </p>
             <p>
