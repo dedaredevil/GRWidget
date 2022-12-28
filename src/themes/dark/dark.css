@@ -187,10 +187,16 @@ body #widget {
 }
 
 /* Tablet breakpoint two columns */
-@media only screen and (min-width: 769px) and (max-width: 1023px) {
+@media only screen and (min-width: 769px) and (max-width: 1155px) {
   .masonry__chopper {
     height: 1380px;
     width: 690px;
+  }
+  .header {
+    margin-left: 5%;
+  }
+  .logo {
+    margin-left: 5%;
   }
 }
 
