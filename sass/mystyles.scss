@@ -1,19 +1,16 @@
 @charset "utf-8";
 
 // Brand colors
-$white: #ebedf0;
-$grey: #20232a;
-$black: #121212;
-$purple: #8b9dff;
+$purple: #8338EC;
+$orange: #FB5607;
+$yellow: #FFBE0B;
 
 // Update Bulma's global variables
-$primary: $grey;
-$link: $purple;
-$text: $white;
-$code-background: #20232a;
+$primary: $purple;
 
 // Update some of Bulma's component variables
-$body-background-color: $black;
+$link: $orange;
+$success: $purple;
 
 // Import Bulma
 @import "../node_modules/bulma/bulma.sass";
