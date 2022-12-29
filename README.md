@@ -54,10 +54,14 @@ src
     └── light
         └── light.css
 ```
-8. **Choose** either the `light.css` or `dark.css` by adding the appropriate themed stylesheet to the `<head>` tag:
+8. **Choose** either the `light.css` or `dark.css` theme and link it inside the `<head>` tag, Or, you can use the files directly from a CDN:
 
 ```
 <link rel="stylesheet" type="text/css" href="src/themes/light/light.css" />
+<link rel="stylesheet" type="text/css" href="https://unpkg.com/grwidget@1.0.0/src/themes/light/light.css" />
+
+<link rel="stylesheet" type="text/css" href="src/themes/dark/dark.css" />
+<link rel="stylesheet" type="text/css" href="https://unpkg.com/grwidget@1.0.0/src/themes/dark/dark.css" />
 ```
 9. **Find** your [Place ID](https://developers.google.com/maps/documentation/places/web-service/place-id) and save it to your clipboard
 10. **Replace** the demo [Place ID](https://developers.google.com/maps/documentation/places/web-service/place-id) in the `index.js` file that you placed in your `src/` directory:
