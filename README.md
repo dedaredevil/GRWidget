@@ -43,25 +43,13 @@ npm install GRWidget
 ```
 <script async src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap&libraries=places&v=weekly"></script>
 ```
-7. **Move** everything from the GRWidget's `src/` directory into your own project's `src/` directory:
-
-```
-src 
-├── index.js
-└── themes
-    ├── dark
-    │   ├── dark.css
-    └── light
-        └── light.css
-```
-8. **Choose** either the `light.css` or `dark.css` theme and link it inside the `<head>` tag, Or, you can use the files directly from a CDN:
+7. **Move** everything from the GRWidget's `src/` directory and `images/` directory into your own project's `src/` and `images/` directory
+8. **Choose** either the `light.css` or `dark.css` theme and link it inside the `<head>` tag:
 
 ```
 <link rel="stylesheet" type="text/css" href="src/themes/light/light.css" />
-<link rel="stylesheet" type="text/css" href="https://unpkg.com/grwidget@1.0.0/src/themes/light/light.css" />
 
 <link rel="stylesheet" type="text/css" href="src/themes/dark/dark.css" />
-<link rel="stylesheet" type="text/css" href="https://unpkg.com/grwidget@1.0.0/src/themes/dark/dark.css" />
 ```
 9. **Find** your [Place ID](https://developers.google.com/maps/documentation/places/web-service/place-id) and save it to your clipboard
 10. **Replace** the demo [Place ID](https://developers.google.com/maps/documentation/places/web-service/place-id) in the `index.js` file that you placed in your `src/` directory:
