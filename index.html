@@ -51,7 +51,7 @@
               </p>
               <ul>
                 <li>
-                  Lightweight - Only one JS file under 9KB
+                  Lightweight - One JS file and two CSS themes all under 15KB
                 </li>
                 <li>
                   Responsive - Shows three different columns layouts at different breakpoints
@@ -85,7 +85,12 @@
                 </li>
                 <li>
                   <p>
-                    <strong>Restrict</strong> your key</a></code> to:
+                    <strong>Add</strong> a website restriction to your API key. Click your API key in Google Cloud developer console and select <code>HTTP referrers (web sites)</code> under application restrictions. Add your site's URL to the web restriction section
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <strong>Add</strong> two API restrictions to your API key. Click your API key in the Google Cloud developer console and select <code>restrict key</code> under API restrictions. Then add the following API's from the drop-down:
                     <br>
                     <pre><code>Maps JavaScript API<br>Places API</code></pre>
                   </p>
@@ -99,7 +104,7 @@
                 </li>
                 <li>
                   <p>
-                    <strong>Insert</strong> in your project's <code>body</code>:
+                    <strong>Insert</strong> the code below into your project's <code>body</code>:
                     <br>
                     <pre><code><xmp><script src="src/index.js"></script>
 <script async src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap&libraries=places&v=weekly"></script>
@@ -108,7 +113,7 @@
                 </li>
                 <li>
                   <p>
-                    <strong>Replace</strong> <code>YOUR_API_KEY</code> with your <a href="https://developers.google.com/maps/documentation/places/web-service/get-api-key">API key</a> from the script above:
+                    <strong>Replace</strong> <code>YOUR_API_KEY</code> with your <a href="https://developers.google.com/maps/documentation/places/web-service/get-api-key">API key</a> from the script you added above:
                     <br>
                     <pre><code><xmp><script async src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap&libraries=places&v=weekly"></script></xmp></code></pre>
                   </p>
@@ -145,7 +150,7 @@
                 </ol>
               <h3>Customization Option</h3>
               <p>
-                <strong>Replace</strong> the number in <code>index.js</code> to show reviews only over that amount:
+                <strong>Edit</strong> this constant in <code>index.js</code> to show reviews only over that score:
                 <br>
                 <pre><code>const LOWEST_REVIEW_SCORE = <span style="color: #8338EC;">3</span>;</code></pre>
               </p>
