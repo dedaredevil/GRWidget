@@ -37,6 +37,10 @@ function renderLogo() {
   // TEMP
   const LOGO = document.createElement("img");
   LOGO.classList.add("logo");
+  setAttributes(LOGO, {
+    src: "/images/google_on_white.png",
+    alt: "Google logo",
+  });
   document.getElementById("widget").append(LOGO);
 }
 
