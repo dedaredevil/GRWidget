@@ -1,3 +1,5 @@
+![GRWidgetExample](https://user-images.githubusercontent.com/29796332/209887436-6e52f3a6-fc01-4536-a0c9-1d5062429f73.png)
+
 # GRWidget
 
 GRWidget is an always up-to-date Google review widget for your website using [Google Maps Javascript API](https://developers.google.com/maps/documentation/javascript) and [Places API](https://developers.google.com/maps/documentation/javascript/places). This widget displays up to five Google Reviews from your non-search area Google Business location.
