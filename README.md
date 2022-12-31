@@ -6,7 +6,7 @@ GRWidget is an always up-to-date Google review widget for your website using [Go
 
 ## Why GRWidget?
 
-- **Lightweight** - Only one JS file under 9KB
+- **Lightweight** - One JS file and two CSS themes all under 15KB
 - **Responsive** - Shows three different columns layouts at different breakpoints
 - **Themes** - Choose from a light or dark theme
 - **Zero Dependencies** - Only CSS and JS
@@ -34,7 +34,7 @@ Places API
 npm install GRWidget
 ```
 
-6. **Insert** the code below into your project's <body>:
+6. **Insert** the code below into your project's `<body>`:
 
 ```
 <script src="src/index.js"></script>
@@ -48,7 +48,7 @@ npm install GRWidget
 <script async src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap&libraries=places&v=weekly"></script>
 ```
 
-8. **Move** everything from the GRWidget's `src/` directory and `images/` directory into your own project's `src/` and `images/` directory
+8. **Copy** GRWidget's `src/` and `images/` directory into your project
 9. **Choose** either the `light.css` or `dark.css` theme and link it inside the `<head>` tag:
 
 ```
